@@ -48,10 +48,21 @@ class TweetSetSuite {
       assertEquals(4, size(set5.union(set1)))
     }
 
+  @Test def `union: with empty set1 an set2`: Unit =
+    new TestSets {
+      assertEquals(0, size(set1.union(set1)))
+    }
+
   @Test def `union: with empty set2`: Unit =
     new TestSets {
       assertEquals(4, size(set1.union(set5)))
     }
+
+  @Test def `union: with set5 and set5`: Unit =
+    new TestSets {
+      assertEquals(4, size(set5.union(set5)))
+    }
+
 
   @Test def `descending: set5`: Unit =
     new TestSets {

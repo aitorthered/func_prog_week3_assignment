@@ -7,3 +7,5 @@ compile
 compile
 run
 test
+compile
+test
