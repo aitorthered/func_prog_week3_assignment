@@ -167,4 +167,8 @@
       </library>
     </orderEntry>
   </component>
+  <component name="SbtModule">
+    <option name="buildForURI" value="file:$MODULE_DIR$/../../" />
+    <option name="imports" value="_root_.sbt.Keys._, _root_.sbt.ScriptedPlugin.autoImport._, _root_.coursier.sbtcoursier.CoursierPlugin.autoImport._, _root_.coursier.sbtcoursiershared.SbtCoursierShared.autoImport._, _root_.scalafix.sbt.ScalafixPlugin.autoImport._, _root_.scalafix.sbt.ScalafixTestkitPlugin.autoImport._, _root_.ch.epfl.lamp.MOOCSettings.autoImport._, _root_.ch.epfl.lamp.StudentTasks.autoImport._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.coursier.sbtcoursier.CoursierPlugin, _root_.coursier.sbtcoursiershared.SbtCoursierShared, _root_.scalafix.sbt.ScalafixPlugin, _root_.scalafix.sbt.ScalafixTestkitPlugin, _root_.ch.epfl.lamp.MOOCSettings, _root_.ch.epfl.lamp.StudentTasks, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" />
+  </component>
 </module>
