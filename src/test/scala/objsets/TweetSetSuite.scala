@@ -68,8 +68,8 @@ class TweetSetSuite {
   @Test def `descending: set5`: Unit =
     new TestSets {
       val trends = set5.descendingByRetweet
-      assert(!trends.isEmpty)
-      assert(trends.head.user == "a" || trends.head.user == "b")
+      Assert.assertEquals(true, !trends.isEmpty)
+      Assert.assertEquals(true, trends.head.user == "a" || trends.head.user == "b")
     }
 
   @Test def `mostRetweeted: set1 empty`: Unit =
@@ -86,7 +86,7 @@ class TweetSetSuite {
   @Test def `mostRetweeted: set5`: Unit =
     new TestSets {
       val trends = set5.mostRetweeted
-      Assert.assertEquals(20,trends.retweets)
+      Assert.assertEquals(20, trends.retweets)
     }
 
 
