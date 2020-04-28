@@ -71,6 +71,17 @@ class TweetSetSuite {
       assert(trends.head.user == "a" || trends.head.user == "b")
     }
 
+  @Test def `mostRetweeted: set1 empty`: Unit =
+    new TestSets {
+      try{
+        val trends = set1.mostRetweeted
+        Assert.fail("Should not reach this")
+      }
+      catch {
+        case _: java.util.NoSuchElementException => ()// Expected, so continue
+      }
+   }
+
 
   @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
 }
