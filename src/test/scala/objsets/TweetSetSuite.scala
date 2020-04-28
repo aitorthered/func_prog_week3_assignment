@@ -4,6 +4,7 @@ import org.junit._
 import org.junit.Assert.assertEquals
 
 class TweetSetSuite {
+
   trait TestSets {
     val set1 = new Empty
     val set2 = set1.incl(new Tweet("a", "a body", 20))
@@ -73,14 +74,20 @@ class TweetSetSuite {
 
   @Test def `mostRetweeted: set1 empty`: Unit =
     new TestSets {
-      try{
+      try {
         val trends = set1.mostRetweeted
         Assert.fail("Should not reach this")
       }
       catch {
-        case _: java.util.NoSuchElementException => ()// Expected, so continue
+        case _: java.util.NoSuchElementException => () // Expected, so continue
       }
-   }
+    }
+
+  @Test def `mostRetweeted: set5`: Unit =
+    new TestSets {
+      val trends = set5.mostRetweeted
+      Assert.assertEquals(20,trends.retweets)
+    }
 
 
   @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
